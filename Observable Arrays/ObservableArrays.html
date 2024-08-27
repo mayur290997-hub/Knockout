@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Observable Array</title>
+</head>
+<body>
+    <!-View-->
+    <form data-bind="submit:addItem">
+        New Item:<input type="text" data-bind="value:itemToAdd,valueUpdate:'afterkeydown'" />
+        <input type="submit" value="Add Items" data-bind="enable:itemToAdd().length>0"/>
+        <p>Items added</p>
+        <select multiple="multiple" width="80" data-bind="options:items"></select>
+    </form>
+    <!--View Ends-->
+    <script src="Scripts/knockout-3.0.0.js"></script>
+    <script src="Scripts/observableArrays.js"></script>
+</body>
+</html>
